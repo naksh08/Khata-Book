@@ -1,0 +1,19 @@
+h3 > span{
+    color: #0085ff;
+}
+
+main > h3 ~ p{
+    padding-left: 0.75rem;
+    margin: 1rem 0 2rem 0;
+}
+
+p ~ a{
+    padding: 0.55rem 1.25rem;
+    width: fit-content;
+    color: #fff;
+    background-color: #0085ff;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+

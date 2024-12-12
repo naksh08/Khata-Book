@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/form.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">Khatabook</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/create">Create New Hisab</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3>You're editing hisaab of <span><%= file.slice(0, 10) %></span> date</h3>
+      <form action="/update/<%= file %>" method="post">
+        <textarea name="filedata"><%= data %></textarea>
+        <input type="submit" value="Update Hisaab"/>
+      </form>
+      </main>
+  </body>
+</html>

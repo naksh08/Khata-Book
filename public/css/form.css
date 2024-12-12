@@ -1,0 +1,39 @@
+
+form {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    height: 25vh;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #0085ff;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #0085ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}

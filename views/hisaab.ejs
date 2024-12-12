@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khata Book - hisaab</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/edit.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">Khatabook</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/create">Create New Hisab</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3>Hisaab of <span><%= file.slice(0, 10) %></span> date</h3>
+      <% if(data=="") { %>
+        <p style="color: red;">This file is empty!</p>
+      <% } else { %>
+      <p><%= data %></p>
+      <% } %>
+      <a href="/edit/<%=file%>">Edit Hisaab</a>
+    </main>
+  </body>
+</html>

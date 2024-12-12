@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khata Book</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/edit.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">Khatabook</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/create">Create New Hisab</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>All Hisab Kitab</h1>
+      <div class="container">
+        <% if(files.length > 0) { %>
+        <% files.forEach(function(file){%>
+          <div class="hisab">
+            <div class="file">
+              <h2><%= file.slice(0, 10) %></h2>
+          <div class="open">
+            <a href="/hisaab/<%= file %>">
+              <img src="./images/arrow.png" alt="arrow-img" />
+            </a>
+          </div>
+        </div>
+        <div class="call-to-action">
+          <div class="action edit">
+            <a href="/edit/<%=file%>"
+              ><img src="/images/edit.png" alt="edit-image"
+              /></a>
+            </div>
+            <div class="action">
+              <a href="/delete/<%=file%>"
+                ><img src="/images/bin.png" alt="bin-image"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <%}) %>
+          <% } else { %>
+            <p style="color: red;">No <i>Khata</i> found!</p>
+            <a href="/create">Create Now</a>
+            <% } %>
+        </div>
+    </main>
+  </body>
+</html>
